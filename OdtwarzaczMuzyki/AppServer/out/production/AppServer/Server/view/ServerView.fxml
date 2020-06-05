@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.view.ServerViewController">
+   <children>
+      <Label layoutX="63.0" layoutY="35.0" text="Server Controls">
+         <font>
+            <Font name="Bodoni MT" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="start" defaultButton="true" layoutX="123.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleStart" text="START">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="disconnect" defaultButton="true" disable="true" layoutX="94.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleDisconnect" text="DISCONNECT">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+      <TableView fx:id="playlist" layoutX="410.0" layoutY="92.0" prefHeight="404.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="isPlayingColumn" minWidth="2.0" prefWidth="2.0" />
+          <TableColumn fx:id="nameColumn" editable="false" prefWidth="287.0" text="SONG" />
+            <TableColumn fx:id="durationColumn" editable="false" prefWidth="86.0" text="DURATION" />
+        </columns>
+      </TableView>
+      <Label layoutX="503.0" layoutY="35.0" text="PLAYLIST">
+         <font>
+            <Font name="Bodoni MT" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="add" defaultButton="true" layoutX="413.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleAddButton" text="ADD">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="remove" defaultButton="true" layoutX="518.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleRemoveButton" text="REMOVE">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="clear" defaultButton="true" layoutX="672.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleClearButton" text="CLEAR">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="load" layoutX="66.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadPlaylist" text="LOAD PLAYLIST">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="save" layoutX="68.0" layoutY="487.0" mnemonicParsing="false" onAction="#savePlaylist" text="SAVE PLAYLIST">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
